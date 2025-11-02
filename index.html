@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DAV Public School, Jamui — Digital Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <img src="assets/logo.png" alt="DAV logo" class="logo">
+        <div class="title">
+          <div class="name">DAV Public School, Jamui</div>
+          <div class="tag">A Digital Initiative for Learning</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#catalog">Catalog</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Search books, videos, question papers and more</h1>
+        <p class="lead">Find resources by title, author, subject, or keyword. This static demo is ready for future database integration.</p>
+
+        <div class="search-row">
+          <input id="q" placeholder="Search for books, authors, subjects, e.g. Mathematics Class X">
+          <select id="typeFilter">
+            <option value="all">All types</option>
+            <option value="book">Book</option>
+            <option value="video">Video</option>
+            <option value="audio">Audio</option>
+            <option value="paper">Question Paper</option>
+          </select>
+          <button onclick="doSearch()">Search</button>
+        </div>
+
+        <div class="chips">
+          <button class="chip" onclick="setFilter('grade','X')">Grade X</button>
+          <button class="chip" onclick="setFilter('subject','Mathematics')">Mathematics</button>
+          <button class="chip" onclick="setFilter('subject','Science')">Science</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="slider">
+          <img src="assets/photo1.jpg" alt="photo1">
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="card">
+      <h2>Catalog</h2>
+      <div id="results" class="list"></div>
+      <div class="pager">
+        <button onclick="prevPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+      </div>
+    </section>
+
+    <section id="resources" class="cards">
+      <div class="card small">
+        <h3>Books</h3>
+        <p>PDFs and e-books for students.</p>
+      </div>
+      <div class="card small">
+        <h3>Question Papers</h3>
+        <p>Last 5 years papers for practice.</p>
+      </div>
+      <div class="card small">
+        <h3>Audio & Video</h3>
+        <p>Educational audio stories and tutorial videos.</p>
+      </div>
+      <div class="card small">
+        <h3>Teacher's Corner</h3>
+        <p>Guides, lesson plans and recommended readings.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p><strong>Address:</strong> Ashok Town Hall Road, Jamui – 811307, Bihar</p>
+      <p><strong>Phone:</strong> +91 6345-224272</p>
+      <p><strong>Email:</strong> <a href="mailto:dav_jamui@rediffmail.com">dav_jamui@rediffmail.com</a></p>
+      <p><strong>Website:</strong> <a href="https://www.davjamui.com" target="_blank">www.davjamui.com</a></p>
+    </section>
+
+    <footer class="site-footer">
+      © DAV Public School, Jamui — A Digital Initiative for Learning
+    </footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
